@@ -1,0 +1,14 @@
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\bin\AWS S3.dll.config
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\bin\AWS S3.dll
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\bin\AWS S3.pdb
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\bin\AWSSDK.Core.dll
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\bin\AWSSDK.S3.dll
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\bin\Microsoft.Web.XmlTransform.dll
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\bin\AWSSDK.Core.pdb
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\bin\AWSSDK.Core.xml
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\bin\AWSSDK.S3.pdb
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\bin\AWSSDK.S3.xml
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\obj\Debug\AWS-S3.csprojAssemblyReference.cache
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\obj\Debug\AWS-S3.csproj.CopyComplete
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\obj\Debug\AWS S3.dll
+C:\Users\daryl\Documents\GitHub\AWS-S3\AWS-S3\obj\Debug\AWS S3.pdb
