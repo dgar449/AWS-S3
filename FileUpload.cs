@@ -14,7 +14,7 @@ namespace AWS_S3
             try
             {
                 TransferUtility fileTransferUtility = new
-                    TransferUtility(new AmazonS3Client(Amazon.RegionEndpoint.APSoutheast1));
+                    TransferUtility(new AmazonS3Client(Amazon.RegionEndpoint.APSouth1));
 
                 //Specify object key name(newFileName) to upload in that path.
                 fileTransferUtility.Upload(filePath,
