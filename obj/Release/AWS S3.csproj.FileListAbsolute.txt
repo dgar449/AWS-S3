@@ -1,0 +1,12 @@
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\bin\AWS S3.dll
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\bin\AWS S3.pdb
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\bin\AWSSDK.Core.dll
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\bin\AWSSDK.S3.dll
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\bin\Microsoft.Web.XmlTransform.dll
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\bin\AWSSDK.Core.pdb
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\bin\AWSSDK.Core.xml
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\bin\AWSSDK.S3.pdb
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\bin\AWSSDK.S3.xml
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\obj\Release\AWS S3.csprojResolveAssemblyReference.cache
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\obj\Release\AWS S3.dll
+C:\Users\Daryll\Documents\dkasbdh\AWSS3\AWSS3\obj\Release\AWS S3.pdb

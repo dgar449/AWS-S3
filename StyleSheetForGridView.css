@@ -1,0 +1,80 @@
+﻿.validateGridView
+{
+    background: none;
+    float: left;
+    font-family: Century Gothic, sans-serif;
+    color: #FF5B5B;
+    font-size:8px;
+    border:thick;
+    border-color:#DADADA;
+} 
+.validateGridView td
+{
+    color:whitesmoke;
+    text-align:left;
+    font-size:initial;
+}
+.validateGridView th
+{
+    color:whitesmoke;
+    text-align:left;
+    font-size:x-large;
+}
+.linkclass
+{
+    color: #DADADA;
+    text-align:left;
+}
+.linkclass:hover
+{
+    color:maroon;
+}
+.dropdown-header1
+{
+    display:block;
+    padding:.5rem 1.5rem;
+    margin-bottom:0;
+    font-size:.875rem;
+    color:#636c72;
+    background:none;
+    /*background-color:none;*/
+    
+    white-space:nowrap;
+    color:#DADADA;
+    
+}
+.csforbodytag
+{
+    background:url(img/backgroundfors3.jpg) fixed;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    width:100%;
+}
+.dropdown-header1 option 
+{
+  background-color: #333333; 
+}
+.csforh3
+{
+    color:whitesmoke;
+    float:left;
+}
+.csfileupld
+{
+    display:inline!important;
+    float:left;
+    color:whitesmoke;
+}
+.csfooter
+{
+    position: fixed; 
+    bottom: 0; 
+    width:100%; 
+    text-align: right;
+    color:whitesmoke;
+}
+.csfooterimg
+{
+    width:10%;
+    height:10%;
+}

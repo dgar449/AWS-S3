@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AWSUpload.aspx">
+      <publishTime>03/30/2017 16:47:32</publishTime>
+    </File>
+    <File Include="bin/AWS S3.dll">
+      <publishTime>03/30/2017 16:50:03</publishTime>
+    </File>
+    <File Include="bin/AWSSDK.Core.dll">
+      <publishTime>03/21/2017 19:50:01</publishTime>
+    </File>
+    <File Include="bin/AWSSDK.S3.dll">
+      <publishTime>03/28/2017 11:47:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.XmlTransform.dll">
+      <publishTime>03/17/2017 14:07:17</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/21/2017 19:50:04</publishTime>
+    </File>
+    <File Include="StyleSheetForGridView.css">
+      <publishTime>03/30/2017 15:36:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/30/2017 16:50:03</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
