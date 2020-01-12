@@ -67,25 +67,43 @@ namespace AWS_S3
                 request.Marker = listResponse.NextMarker;
             } while (listResponse.IsTruncated);
         }
+
         protected void DownloadFile(object sender, EventArgs e)
         {
+            string region = ConfigurationManager.AppSettings["AWSRegion"].ToString();
+            AmazonS3Client client = new AmazonS3Client(RegionEndpoint.GetBySystemName(region));
+            string bucketName = ConfigurationManager.AppSettings["AWSBucketName"];
             int rindex = (((GridViewRow)(((Control)(sender)).Parent.BindingContainer))).RowIndex;
-            string filePath = ListAWSS3GridView.Rows[rindex].Cells[0].Text;
-            string s3path = "https://" + WebConfigurationManager.AppSettings["AWSBucketName"] + ".s3.amazonaws.com/";
-            string fileName = filePath.Substring(filePath.LastIndexOf("/") + 1, filePath.Length - filePath.LastIndexOf("/") - 1);
-            string downloadPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory))+"\\S3Download\\";
-            if(!Directory.Exists(downloadPath))
+            string key = ListAWSS3GridView.Rows[rindex].Cells[0].Text;
+            string fileName = key.Substring(key.LastIndexOf("/") + 1, key.Length - key.LastIndexOf("/") - 1);
+            string filepath = Server.MapPath("\\S3Download\\" + fileName);
+
+            try
             {
-                Directory.CreateDirectory(downloadPath);
+                TransferUtility fileTransferUtility = new TransferUtility(client);
+                fileTransferUtility.Download(filepath, bucketName, key);
+
+                string downloadPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory)) + "\\S3Download\\";
+                if (!Directory.Exists(downloadPath))
+                {
+                    Directory.CreateDirectory(downloadPath);
+                }
             }
-            WebClient webClient = new WebClient();
-            //To download the file to the local system path
-            webClient.DownloadFile(new Uri(s3path + filePath), downloadPath + fileName);
-            webClient.Dispose();        //Freeing up memory to avoid exception errors
-            webClient = null;
+            catch (AmazonS3Exception ex)
+            {
+                Console.WriteLine("Error encountered ***. Message:'{0}' when writing an object", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Unknown encountered on server. Message:'{0}' when writing an object", ex.Message);
+            }
+            //WebClient webClient = new WebClient();
+            ////To download the file to the local system path
+            //webClient.DownloadFile(new Uri(s3path + filePath), downloadPath + fileName);
+            //webClient.Dispose();        //Freeing up memory to avoid exception errors
+            //webClient = null;
 
             //To Get the physical Path of the file
-            string filepath = Server.MapPath("\\S3Download\\"+fileName);
 
             // Create New instance of FileInfo class to get the properties of the file being downloaded
             FileInfo myfile = new FileInfo(filepath);
@@ -115,7 +133,7 @@ namespace AWS_S3
             finally
             {
                 //To delete the local file
-                File.Delete(downloadPath + fileName);
+                File.Delete(filepath);
             }
         }
         protected void DeleteFile(object sender, EventArgs e)
@@ -125,7 +143,7 @@ namespace AWS_S3
             //Get the name of the file to delete
             string fileName = ListAWSS3GridView.Rows[rindex].Cells[0].Text;
 
-            Amazon.S3.AmazonS3Client client = new Amazon.S3.AmazonS3Client(
+            AmazonS3Client client = new AmazonS3Client(
                 WebConfigurationManager.AppSettings["AWSAccessKey"],
             WebConfigurationManager.AppSettings["AWSSecretKey"]);
             // To delete the file based on the file key
@@ -149,8 +167,7 @@ namespace AWS_S3
                 string s3Bucket = WebConfigurationManager.AppSettings["AWSBucketName"];
                 //Creating an object of the FileUpload.cs class
                 FileUpload fuObj = new FileUpload();
-                int filecount = AWSFileUpload.PostedFiles.Count;
-                
+
                 try
                 {
                     foreach (HttpPostedFile postfiles in AWSFileUpload.PostedFiles)
@@ -182,5 +199,6 @@ namespace AWS_S3
                 }
             }
         }
+
     }
 }

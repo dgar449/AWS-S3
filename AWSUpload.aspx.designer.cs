@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AWS_S3 {
-    
-    
-    public partial class AWS_Upload {
-        
+namespace AWS_S3
+{
+
+
+    public partial class AWS_Upload
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace AWS_S3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// AWSFileUpload control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace AWS_S3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload AWSFileUpload;
-        
+
         /// <summary>
         /// UploadButton control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace AWS_S3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button UploadButton;
-        
+
         /// <summary>
         /// AWSUploadKey control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace AWS_S3 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList AWSUploadKey;
-        
+
         /// <summary>
         /// ListAWSS3GridView control.
         /// </summary>
